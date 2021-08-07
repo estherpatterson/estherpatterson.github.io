@@ -1,12 +1,32 @@
+// Make a guess if the user hits 'Enter' from the text box
+document.getElementById("textGuess")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("buttonGuess").click();
+    }
+});
 
-document.getElementById("button-1").onclick = function () {
-  location.href = "./pages/about.html";
-};
+// Think of a random number
+var myNumber = Math.ceil(Math.random() * 100);
+var numGuesses = 0;
 
-document.getElementById("button-2").onclick = function () {
-  alert("Hello world!");
-};
+// Compare the user's guess to the number I thought of
+function guessNumber(userGuess) {
+  numGuesses++;
+  if (userGuess <  myNumber) {
+    alert("That number is too low, try again!");
+    document.getElementById("textGuess").select();
+  } else if (userGuess > myNumber) {
+    alert("That number is too high, try again!");
+    document.getElementById("textGuess").select();
+  } else {
+    alert("You got it in " + numGuesses + " guesses!!! The number was " + myNumber);
+    showSurprise();
+  }
+}
 
-document.getElementById("button-3").onclick = function () {
-  document.getElementById("content").style.color = "blue";
-};
+// Unhide the video once they guess the number
+function showSurprise() {
+  document.getElementById("surprise").style.visibility="visible";
+}

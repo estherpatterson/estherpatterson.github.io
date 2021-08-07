@@ -9,7 +9,8 @@ body {
 #container {
   grid-template-rows: 1fr 5fr;
   grid-template-columns: 1fr 3fr;
-
+  background-size: cover;
+  background-image: url("../image.jpg");
   height: 100%;
   display: grid;
 }
@@ -18,7 +19,7 @@ body {
   grid-column-start: 1;
   grid-column-end: 3;
 
-  background-color: darkgray;
+  background-color: rgba(248, 85, 180, 0.966);
 
   margin: 10px;
   padding: 10px;
@@ -28,11 +29,17 @@ body {
   text-align: center;
 }
 
-#content {
+#content { 
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
   margin: 5px;
   padding: 5px;
 }
-
+#surprise {
+  visibility: hidden;
+}
 /* Sidebar styling */
 .sidebar-button {
   width: 90%;

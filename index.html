@@ -7,14 +7,20 @@
 
 <body>
   <div id="container">
-    <div id="header">Welcome to my website</div>
-    <div id="sidebar">
-      <button class="sidebar-button" id="button-1">Page one</button>
-      <button class="sidebar-button" id="button-2">Page two</button>
-      <button class="sidebar-button" id="button-3">Page three</button>
+    <div id="header">Esther's number guessing page</div>
+    
+    <div id="content"><div> I'm thinking of a number 1-100 if you can guess what the number is i will show you a suprise. </div>
+     <input type="text" placeholder="Enter your guess here" id="textGuess">
+      <input type="button" value="Guess!" id="buttonGuess" onclick="guessNumber(textGuess.value)">
+    
+      <div id= "surprise" >
+        <h1>SURPRISE!!!!</h1>  
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mRf3-JkwqfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
-    <div id="content"> I'm thinking of a number 1-100 if you can guess what the number is i will show you a suprise.
-    </div>
+  
+  </div>
+    
     <script src="./javascript/home.js"></script>
   </div>
 </body>
